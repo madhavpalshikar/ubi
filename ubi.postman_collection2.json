@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "d3235e81-18bd-4ef5-b17d-241681485f7a",
+		"name": "ubi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get AccessToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ubisoft",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "ubisoft",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://ec2-13-127-21-116.ap-south-1.compute.amazonaws.com:3000/accessToken",
+					"protocol": "http",
+					"host": [
+						"ec2-13-127-21-116",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"accessToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LeaderBoard",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6dHJ1ZSwiaWF0IjoxNTcxNjgzNjAxLCJleHAiOjE1NzE2ODcyMDF9.N5ecACiuhyzRoYRflr2yGw9HOLVJ3RbuT9Y1jGN2CKA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://ec2-13-127-21-116.ap-south-1.compute.amazonaws.com:3000/LeaderBoard?match=war2019",
+					"protocol": "http",
+					"host": [
+						"ec2-13-127-21-116",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"LeaderBoard"
+					],
+					"query": [
+						{
+							"key": "match",
+							"value": "war2019"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LeaderBoard/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6dHJ1ZSwiaWF0IjoxNTcxNjgzNjAxLCJleHAiOjE1NzE2ODcyMDF9.N5ecACiuhyzRoYRflr2yGw9HOLVJ3RbuT9Y1jGN2CKA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://ec2-13-127-21-116.ap-south-1.compute.amazonaws.com:3000/LeaderBoard/1?match=war2019",
+					"protocol": "http",
+					"host": [
+						"ec2-13-127-21-116",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"LeaderBoard",
+						"1"
+					],
+					"query": [
+						{
+							"key": "match",
+							"value": "war2019"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PlayerStats",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6dHJ1ZSwiaWF0IjoxNTcxNjgzNjAxLCJleHAiOjE1NzE2ODcyMDF9.N5ecACiuhyzRoYRflr2yGw9HOLVJ3RbuT9Y1jGN2CKA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://ec2-13-127-21-116.ap-south-1.compute.amazonaws.com:3000/PlayerStats?match=war2019",
+					"protocol": "http",
+					"host": [
+						"ec2-13-127-21-116",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"PlayerStats"
+					],
+					"query": [
+						{
+							"key": "match",
+							"value": "war2019"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PlayerStats/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6dHJ1ZSwiaWF0IjoxNTcxNjgzNjAxLCJleHAiOjE1NzE2ODcyMDF9.N5ecACiuhyzRoYRflr2yGw9HOLVJ3RbuT9Y1jGN2CKA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://ec2-13-127-21-116.ap-south-1.compute.amazonaws.com:3000/PlayerStats/3",
+					"protocol": "http",
+					"host": [
+						"ec2-13-127-21-116",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"PlayerStats",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
